@@ -1,24 +1,29 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta name="google-site-verification" content="kBgGBCchjK88DBA0NOKsf0VqEMlW9QDUmIpqnhBaZag" />
     <meta charset="UTF-8">
-    <meta name="Arena Clash" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arena Clash is a gaming platform to compete, win, and earn real money. Join now and play in fair tournaments.">
+    <meta name="keywords" content="Arena Clash, gaming app, tournament app, esports, play and earn, fair gaming, earn money by playing, download Arena Clash">
+    <meta name="author" content="GW DEV FF">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Arena Clash - Compete. Win. Earn.">
+    <meta property="og:description" content="Join the ultimate gaming platform and compete in fair tournaments to win real cash prizes!">
+    <meta property="og:image" content="https://i.ibb.co/cKVRZ1gq/Picsart-25-03-16-23-10-10-735.jpg">
+    <meta property="og:url" content="https://arenaclash.github.io/Arena-Clash/">
+    <meta name="google-site-verification" content="kBgGBCchjK88DBA0NOKsf0VqEMlW9QDUmIpqnhBaZag" />
     <title>ARENA CLASH</title>
     <style>
-        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #111; /* Dark Background */
+            background-color: #111;
             color: white;
             margin: 0;
             padding: 0;
             text-align: center;
         }
-
-        /* Navigation Bar */
         nav {
-            background: yellow;
+            background: red;
             padding: 15px;
             position: fixed;
             width: 100%;
@@ -26,7 +31,6 @@
             left: 0;
             z-index: 100;
         }
-
         nav a {
             color: white;
             text-decoration: none;
@@ -34,29 +38,29 @@
             margin: 0 15px;
             font-weight: bold;
         }
-
-        /* Sections */
         section {
             padding: 80px 20px;
             margin-top: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
         }
-
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         h2 {
             color: white;
         }
-
-        /* Image */
         .game-image {
-            width: 250px; /* Adjust size */
+            width: 250px;
             border-radius: 10px;
             box-shadow: 0px 0px 15px red;
             margin-bottom: 20px;
         }
-
-        /* Download Button */
         .download-btn {
             display: inline-block;
-            background: red; /* Esports Theme */
+            background: red;
             color: white;
             font-size: 18px;
             font-weight: bold;
@@ -67,20 +71,16 @@
             box-shadow: 0px 0px 10px red;
             transition: 0.3s ease-in-out;
         }
-
         .download-btn:hover {
             box-shadow: 0px 0px 20px red;
             transform: scale(1.05);
         }
-
-        /* Features */
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
-
         .feature-box {
             background: #222;
             padding: 20px;
@@ -89,15 +89,11 @@
             text-align: center;
             box-shadow: 0px 0px 10px red;
         }
-
-        /* Support Section */
         .email-text {
             color: red;
             font-weight: bold;
             text-decoration: none;
         }
-
-        /* Footer */
         footer {
             background: red;
             color: white;
@@ -106,34 +102,25 @@
             bottom: 0;
             width: 100%;
         }
-
     </style>
 </head>
 <body>
-
-    <!-- Navigation -->
     <nav>
         <a href="#about">About</a>
         <a href="#download">Download</a>
         <a href="#features">Features</a>
         <a href="#support">Support</a>
     </nav>
-
-    <!-- About Section -->
     <section id="about">
         <h2>About Arena Clash</h2>
         <p>Arena Clash is the ultimate gaming platform where players compete, win, and earn real money in a fair gaming environment.</p>
     </section>
-
-    <!-- Download Section -->
     <section id="download">
         <h2>Download ARENA CLASH</h2>
         <img src="https://i.ibb.co/cKVRZ1gq/Picsart-25-03-16-23-10-10-735.jpg" alt="Arena Clash Logo" class="game-image">
         <p>Click the button below to download and start playing!</p>
         <a href="https://ga-fs.primexop.com/2699/androidBuilds/arena-clashV3.apk" class="download-btn" download>Download Now</a>
     </section>
-
-    <!-- Features Section -->
     <section id="features">
         <h2>Features</h2>
         <div class="features">
@@ -163,8 +150,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Support Section -->
     <section id="support">
         <h2>Support</h2>
         <p>Need help? Our support team is available 24/7 to assist you.</p>
@@ -173,8 +158,21 @@
         <p>Email: <a href="mailto:arenaclash682@gmail.com" class="email-text">arenaclash682@gmail.com</a></p>
         <p>We usually respond within 24 hours. Thank you for being a part of ARENA CLASH!</p>
     </section>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 ARENA CLASH. All rights reserved.</p>
-   </footer>
+    </footer>
+    <script>
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.1 });sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
